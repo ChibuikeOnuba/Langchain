@@ -39,7 +39,7 @@ def create_medication_analyzer():
     )
     
     # Create chain
-    llm = OpenAI(temperature=0.1)
+    llm = OpenAI(temperature=0.6)
     chain = LLMChain(llm=llm, prompt=prompt)
     
     return chain, parser
@@ -61,7 +61,7 @@ def create_lifestyle_analyzer():
         partial_variables={"format_instructions": parser.get_format_instructions()}
     )
     
-    llm = OpenAI(temperature=0.1)
+    llm = OpenAI(temperature=0.6)
     chain = LLMChain(llm=llm, prompt=prompt)
     
     return chain, parser
