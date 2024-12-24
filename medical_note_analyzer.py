@@ -105,15 +105,3 @@ def analyze_clinical_note(note: str):
     }
     
     return final_analysis
-
-# Example usage
-if __name__ == "__main__":
-    sample_note = """
-    Patient presents with controlled hypertension. Currently taking:
-    - Lisinopril 10mg daily
-    - Metoprolol 25mg twice daily
-    Patient exercises 3 times per week and maintains a moderate-salt diet.
-    """
-    
-    analysis = analyze_clinical_note(sample_note)
-    print(json.dumps(analysis, indent=2))
